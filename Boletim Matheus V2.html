@@ -1,0 +1,108 @@
+<meta charset="utf-8">
+
+<head>
+	
+    <title>Boletim Eletrônico Mensal</title>
+
+</head>
+
+<body bgcolor = "lightyellow">
+
+<script>
+	
+    window.alert("BOLETIM ESCOLAR ELETRÔNICO - MENSAL [ ENTRADA DE DADOS ]");
+    
+    window.alert("DADOS DA INSTITUIÇÃO ESCOLAR");
+    var escola = window.prompt("Nome da Escola:");
+    var enderç1 = window.prompt("Endereço:");
+    var bairro1 = window.prompt("Bairro:");
+    var cidade1 = window.prompt("Cidade:");
+    var estado1 = window.prompt("Estado:");
+    var diabltm = window.prompt("Dia do Boletim");
+    var mes = window.prompt("Mês do Boletim (por extenso):");
+    var ano = window.prompt("Ano do Boletim:");
+
+        window.alert("DADOS DO ALUNO (A)")
+        var nome = window.prompt("Nome:");
+        var matricl = window.prompt("Número de Matrícula");
+        var enderç2 = window.prompt("Endereço:");
+        var bairro2 = window.prompt("Bairro:"); 
+        var cidade2 = window.prompt("Cidade:");
+        var estado2 = window.prompt("Estado:");
+        var discpl1 = window.prompt("Disciplina 1:");
+        var prfsr1 = window.prompt(`Professor(a) de ${discpl1}`);
+        var discpl2 = window.prompt("Disciplina 2:");
+        var prfsr2 = window.prompt(`Professor(a) de ${discpl2}`);
+        var serie = window.prompt("Ano que está cursando o Ensino Médio:");
+
+            window.alert(`ENTRADA DE NOTAS DO ALUNO DISCIPLINA 1 (A): ${nome}`);
+            var nota1 = Number(window.prompt(`Digite a 1ª nota do aluno (a) ${nome} da disciplina de ${discpl1}`));
+            var dia1 = Number(window.prompt(`Dia da 1ª Atividade Avaliativa no mês de ${mes} / ${ano}`));
+            var nota2 = Number(window.prompt(`Digite a 2ª nota do aluno (a) ${nome} da disciplina de ${discpl1}`));
+            var dia2 = Number(window.prompt(`Dia da 2ª Atividade Avaliativa no mês de ${mes} / ${ano}`));
+            var nota3 = Number(window.prompt(`Digite a 3ª nota do aluno (a) ${nome} da disciplina de ${discpl1}`));
+            var dia3 = Number(window.prompt(`Dia da 3ª Atividade Avaliativa no mês de ${mes} / ${ano}`));
+
+              window.alert(`ENTRADA DE NOTAS DO ALUNO DISCIPLINA 2 (A): ${nome}`);
+              var nota4 = Number(window.prompt(`Digite a 1ª nota do aluno (a) ${nome} da disciplina de ${discpl2}`));
+              var dia4 = Number(window.prompt(`Dia da 1ª Atividade Avaliativa no mês de ${mes} / ${ano}`));
+              var nota5 = Number(window.prompt(`Digite a 2ª nota do aluno (a) ${nome} da disciplina de ${discpl2}`));
+              var dia5 = Number(window.prompt(`Dia da 2ª Atividade Avaliativa no mês de ${mes} / ${ano}`));
+              var nota6 = Number(window.prompt(`Digite a 3ª nota do aluno (a) ${nome} da disciplina de ${discpl2}`));
+              var dia6 = Number(window.prompt(`Dia da 3ª Atividade Avaliativa no mês de ${mes} / ${ano}`));
+
+                  window.alert("RESPONSÁVEL PELAS INFORMAÇÕES");
+                  var respons = window.prompt("Nome do Secretário Escolar Responsável");
+
+                      window.alert(`A SEGUIR SERÁ GERADO NA TELA O BOLETIM ESCOLAR DO ALUNO (A): ${nome}`);
+                      var media1 = (nota1+nota2+nota3)/3
+                      var media2 = (nota4+nota5+nota6)/3
+                      var ternario1 = (nota1+nota2+nota3)/3 >= 7.0 ? "Aprovado / Parabéns ao aluno(a), muito bem!" : "Reprovado / Aluno(a) deve estudar mais!"
+                      var ternario2 = (nota4+nota5+nota6)/3 >= 7.0 ? "Aprovado / Parabéns ao aluno(a), muito bem!" : "Reprovado / Aluno(a)estudar mais."
+
+                          document.write("<h2>=================================================================================</h2>");
+                          document.write("<h1>BOLETIM ESCOLAR ELETRÔNICO - MENSAL");
+                          document.write("<h2>=================================================================================</h2>");
+                          document.write("<h3>1-DADOS DA INSTITUIÇÃO ESCOLAR:</h3>");
+                          document.write(`Escola: <b>${escola}</b> <br>`);
+                          document.write(`Endereço: ${enderç1} <br>`);
+                          document.write(`Bairro: ${bairro1} na cidade de ${cidade1} no estado do ${estado1} <br>`);
+                          document.write(`<h2>=================================================================================</h2>`);
+                          document.write("<h3>2-DADOS DO ALUNO(A):</h3>");
+                          document.write(`Nome do Aluno(a): <b>${nome}</b> <br>`);
+                          document.write(`Matrícula do Aluno(a): <b>${matricl}</b> <br>`);
+                          document.write(`Endereço: ${enderç2} <br>`);
+                          document.write(`Bairro: ${bairro2} na cidade de ${cidade2} no estado do ${estado2} <br>`);
+                          document.write(`<h2>=================================================================================</h2>`);
+                          document.write("<h3>3-NOTAS DO BOLETIM:</h3>");
+                          document.write(`Disciplina: ${discpl1} e ${discpl2}<br>`);
+                          document.write(`Cursando: ${serie}º ano do Ensino Médio <br>`);
+                          document.write(`Mês: ${mes} de ${ano} <br> <br>`);
+                          document.write(`Nota da 1ª prova de ${discpl1}<b>[${nota1}]</b> -Atividade Avaliativa do dia ${dia1} de ${mes} de ${ano} <br>`);
+                          document.write(`Nota da 2ª prova de ${discpl1}<b>[${nota2}]</b> -Atividade Avaliativa do dia ${dia2} de ${mes} de ${ano} <br>`);
+                          document.write(`Nota da 3ª prova de ${discpl1}<b>[${nota3}]</b> -Atividade Avaliativa do dia ${dia3} de ${mes} de ${ano} <br> <br>`);
+                          document.write(`Nota da 1ª prova de ${discpl2}<b>[${nota4}]</b> -Atividade Avaliativa do dia ${dia4} de ${mes} de ${ano} <br>`);
+                          document.write(`Nota da 2ª prova de ${discpl2}<b>[${nota5}]</b> -Atividade Avaliativa do dia ${dia5} de ${mes} de ${ano} <br>`);
+                          document.write(`Nota da 3ª prova de ${discpl2}<b>[${nota6}]</b> -Atividade Avaliativa do dia ${dia6} de ${mes} de ${ano} <br>`);
+                          document.write(`<h2>=================================================================================</h2>`);
+                          document.write("<h3>4-PARECER/RESULTADO FINAL: </h3>");
+                          document.write(`Disciplina: <b>${discpl1}</b> <br>`);
+                          document.write(`Professor: <b>${prfsr1}</b> <br>`)
+                          document.write(`A Média obtida pelo Aluno(a) <b>${nome}</b> é: <b>[${media1.toFixed(2)}]</b> <br>`);
+                          document.write(`Parecer final no mês de <b>${mes}</b> / <b>${ano}</b> : <b>${ternario1}</b> <br> <br>`);
+                          document.write(`Disciplina: <b>${discpl2}</b> <br>`);
+                          document.write(`Professor: <b>${prfsr2}</b> <br>`)
+                          document.write(`A Média obtida pelo Aluno(a) <b>${nome}</b> é: <b>[${media2.toFixed(2)}]</b> <br>`);
+                          document.write(`Parecer final no mês de <b>${mes}</b> / <b>${ano}</b> : <b>${ternario2}</b> <br>`);
+                          document.write(`<h2>=================================================================================</h2>`);
+                          document.write("<h3>5-RESPONSÁVEL ESCOLAR: </h3>");
+                          document.write(`Instituição Escolar: <b>[${escola}]</b> <br>`);
+                          document.write(`Secretário Escolar: <b>[${respons}]</b> <br>`);
+                          document.write(`<h2>=================================================================================</h2>`);
+                          document.write(`Impresso em ${diabltm} de ${mes}, ${ano}`);
+                                                                                                                                                                    // Version 2.0 2024-0321
+                                                                                                                                                                    // Developer MatheusMSL
+
+</script>
+
+</body>
